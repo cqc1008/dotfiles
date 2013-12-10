@@ -1,0 +1,11 @@
+---
+:verbose: true
+:backtrace: false
+:benchmark: false
+:bulk_threshold: 1000
+:update_sources: true
+:sources:
+- http://rubygems.org
+- http://gems.rubyforge.org
+- http://ruby.taobao.org
+gem: --no-ri --no-rdoc
