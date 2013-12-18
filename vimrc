@@ -1,7 +1,3 @@
-call pathogen#infect()
-syntax on
-filetype plugin indent on
-
 " This must be first, because it changes other options as a side effect
 " 不兼容vi
 set nocompatible
@@ -18,10 +14,23 @@ set nowritebackup
 set history=50    " keep 50 lines of command line history
 set ruler    " show the cursor position all the time
 set showcmd    " display incomplete commands
-set incsearch    " do incremental searching
+set incsearch    " do incremental searching 实时显示搜索结果
 
 " Don't use Ex mode, use Q for formatting
 " map Q gq
+
+" Switch syntax highlighting on, when the terminal has colors
+" Also switch on highlighting the last used search pattern.
+if (&t_Co > 2 || has("gui_running")) && !exists("syntax_on")
+  syntax on
+  set hlsearch    " 高亮度反白
+endif
+
+if has("autocmd")
+  call pathogen#infect()    " 必须在 'filetype plugin indent on' 之前
+
+  filetype plugin indent on
+endif
 
 " 行号
 set number    " 显示行号
@@ -58,7 +67,6 @@ set showmatch    " 括号对应
 
 " 搜索
 set ignorecase    " 忽略大小写
-set incsearch    " 实时显示搜索结果
 
 " 文件编码
 set encoding=utf-8    " 设置编码

@@ -6,7 +6,7 @@
 
 " 字体
 if has("gui_macvim")
-  set guifont=Monaco:h18    " 设置字体和大小
+  set guifont=Monaco:h15,Andale\ Mono:h15    " 设置字体和大小
 endif
 
 set guioptions-=T    " hide toolbar
