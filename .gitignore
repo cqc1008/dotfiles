@@ -1,7 +1,4 @@
 vim/.netrwhist
 vim/.VimballRecord
 
-vim/bundle/*/.git
-vim/bundle/*/.gitignore
-vim/bundle/*/*.md
-vim/budnle/Rakefile
+bundle/
